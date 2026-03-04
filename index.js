@@ -1,3 +1,9 @@
+const createElements = (arr) => {
+  const htmlElement = arr.map(
+    (el) => `<span class = "btn text-xl bg-[#D7E4EF]">${el}</span>`
+  );
+  return htmlElement.join(" ");
+};
 const loadLessons = () => {
   const url = "https://openapi.programming-hero.com/api/levels/all";
   fetch(url)
@@ -19,6 +25,43 @@ const loadLevelWord = (id) => {
       clickBtn.classList.add("active");
       displayLevelWord(data.data);
     });
+};
+
+const loadWordDetail = async (id) => {
+  const url = `https://openapi.programming-hero.com/api/word/${id}`;
+  const res = await fetch(url);
+  const details = await res.json();
+  displayWordDetails(details.data);
+};
+
+const displayWordDetails = (word) => {
+  const detailsContainer = document.getElementById("details-container");
+  detailsContainer.innerHTML = `
+        <div id="details-container" class="space-y-9">
+          <div>
+            <h2 class="text-3xl font-bold">
+              ${word.word} (<i class="fa-solid fa-microphone-lines"></i>:${
+    word.pronunciation
+  })
+            </h2>
+          </div>
+          <div class="space-y-3">
+            <h3 class="font-bold text-xl">Meaning</h3>
+            <p class="font-bangla text-xl font-medium">${word.meaning}</p>
+          </div>
+          <div class="space-y-3">
+            <h3 class="font-bold text-xl">example</h3>
+            <p class="text-xl">${word.sentence}</p>
+          </div>
+          <div>
+            <h3 class="font-bangla text-xl font-medium">সমার্থক শব্দ গুলো</h3>
+          </div>
+          <div>
+            ${createElements(word.synonyms)}
+          </div>
+        </div>
+  `;
+  document.getElementById("my_modal_5").showModal();
 };
 
 const displayLevelWord = (words) => {
@@ -49,7 +92,9 @@ const displayLevelWord = (words) => {
       word.pronunciation ? word.pronunciation : "Pronunciation পাওয়া যায়নি"
     }"</h2>
           <div class="flex justify-between px-12">
-            <button class="btn bg-[#1A91FF20]">
+            <button onclick="loadWordDetail(${
+              word.id
+            })" class="btn bg-[#1A91FF20]">
               <i class="fa-solid fa-circle-info"></i>
             </button>
             <button class="btn bg-[#1A91FF20]"><i class="fa-solid fa-volume-high"></i></button>
