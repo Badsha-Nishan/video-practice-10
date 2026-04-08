@@ -8,7 +8,7 @@ It provides an easy-to-use interface for learning vocabulary, practicing, and en
 
 ## 🚀 Live Demo
 
-👉 [](https://badsha-nishan.github.io/English-Janala/)
+👉 https://badsha-nishan.github.io/English-Janala/
 
 ---
 
