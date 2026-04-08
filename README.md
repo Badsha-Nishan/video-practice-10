@@ -1,116 +1,54 @@
 # ENGLISH <img width="25px" src="./assets/logo.png" /> JANALA
 
 ---
-
-## ⚡ API Endpoints
-
-1. Get ⚡ All Levels
-
-```bash
-https://openapi.programming-hero.com/api/levels/all
-```
-
-1. Get ⚡ Words by Levels <br/>
-   https:// openapi.programming-hero.com/api/level/{id}
-
-```bash
-https://openapi.programming-hero.com/api/level/5
-```
-
-1. Get ⚡ Words Detail <br/>
-   https:// openapi.programming-hero.com/api/word/{id}
-
-```bash
-https://openapi.programming-hero.com/api/word/5
-```
-
-1. Get ⚡ All Words <br/>
-
-```bash
-https://openapi.programming-hero.com/api/words/all
-```
-
-# Work To do
-
-### 1. Show Levels on The UI
-
-- [ ] Show a center-aligned heading as Figma
+English Janala is a web application designed to help users improve their English skills in an interactive and simple way.
+It provides an easy-to-use interface for learning vocabulary, practicing, and enhancing language understanding.
 
 ---
 
-- [ ] Create dynamically generated buttons from **API-01** for each lesson
-- [ ] Lesson Buttons will be displayed on page load
+## 🚀 Live Demo
+
+👉 [](https://badsha-nishan.github.io/English-Janala/)
 
 ---
 
-### 2. Show Word Cards Based on Level
+## 🛠️ Technologies Used
 
-- [ ] Show a default text that will be displayed in the Vocabulary section initially
-- [ ] on Clicking a Specific Lesson Button Load All the words from **API-02**
-- [ ] Display all words for a selected lesson in a card format, showing:
-
-  - [ ] Word
-  - [ ] Word meaning & pronunciation
-  - [ ] Two buttons with relevant icons as per Figma
-
-- [ ] Show **\*No Word Found** message if no words exist for a lesson
+* 🟨 JavaScript (ES6+)
+* 🎨 Tailwind CSS
+* 📦 JSON (for data handling)
 
 ---
 
-- [ ] Create functionality to highlight the active lesson button
+## ✨ Key Features
+
+* 📖 Learn English vocabulary
+* 🔍 Interactive word exploration
+* 🧠 Practice and improve language skills
+* ⚡ Fast and user-friendly interface
+* 📱 Responsive design (mobile & desktop)
+
+---
+## 🎯 Future Improvements
+
+* 🔊 Pronunciation audio support
+* 📝 Quiz system
+* 📊 Progress tracking
 
 ---
 
-### 3. Use Different Color on The Active Level Button
+## 📸 Screenshots
+<img width="1829" height="791" alt="Screenshot 2026-03-09 124749" src="https://github.com/user-attachments/assets/63fd5bf5-7d07-4e94-9cfb-3c9cfe5881f5" />
+<img width="1879" height="796" alt="Screenshot 2026-03-09 124842" src="https://github.com/user-attachments/assets/e8bcb38f-b331-4570-8934-546edc59619e" />
+<img width="1341" height="751" alt="Screenshot 2026-03-09 124815" src="https://github.com/user-attachments/assets/670ac1e3-2b96-4bef-b9e2-fd505daebe9e" />
 
-- [ ] After Successfully Loading words of a level , diffirentiate the button so user can understand which button is active
-
-### 4. Vocabulary Details
-
-- [ ] Create functionality to open a modal when clicking the details icon
-- [ ] Data will be load from **API-03**
-- [ ] modal will displays:
-  - [ ] Word with pronunciation
-  - [ ] Example sentence
-  - [ ] Synonyms
-  - [ ] A "Complete Learning" button to close the modal
-
-### 5. Handling Invalid Data
-
-- [ ] avoid displaying falsy values like `undefined` or `null`
-- [ ] display relevant words if no data is found
-
-### 6. Loading Spinner
-
-- [ ] Create a loading spinner that will be display when vocabulary is loading from API
-
-### 7. Implement Search Functionality
-
-- [ ] Take a input Box.
-- [ ] on Changing value It will Search word and show in the UI.
-- [ ] If anyone Do search reset active button
-
-### 8. Save Word Feature
-
-- [ ] in the UI of Card add a button `Heart icon`
-- [ ] on Clicking it. Store the Word in the Saved Box
-- [ ] Show Saved words in a Different Section.
-
-### 9. Speak your Vocabularies
-
-- [ ] Create functionality for voice pronunciation of vocabulary words
-- [ ] Use below function and implement on clicking sound icon
-
-```js
-function pronounceWord(word) {
-  const utterance = new SpeechSynthesisUtterance(word);
-  utterance.lang = "en-EN"; // English
-  window.speechSynthesis.speak(utterance);
-}
-```
-
-For More >> you can explore this implementation 👉 [https://codepen.io/Ferdous-Zihad/pen/PwoJMmJ](https://codepen.io/Ferdous-Zihad/pen/PwoJMmJ)
 
 ---
-Bonus : How to create Private Repository for next assignments
-## Test Repo - :  https://classroom.github.com/a/Fgjib-lr
+
+## 📧 Contact
+
+👉 [badshanisan14@gmail.com](mailto:badshanisan14@gmail.com)
+
+---
+
+⭐️ If you like this project, give it a star!
